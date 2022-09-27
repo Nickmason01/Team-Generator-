@@ -1,4 +1,4 @@
-const { TestScheduler } = require("jest/build/jest");
+
 const Intern = require("../lib/Intern")
 
 describe ("New Intern", () => {

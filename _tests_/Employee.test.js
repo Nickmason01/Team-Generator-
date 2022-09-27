@@ -1,4 +1,4 @@
-const { TestScheduler } = require("jest/build/jest");
+
 const Employee = require("../lib/Employee")
 //const jest = require("jest")
 
