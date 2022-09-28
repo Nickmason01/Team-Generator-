@@ -134,6 +134,7 @@ function nextEmployee() {
 }
 
 
+
 function stop (response) {
   console.log(response)
   fs.writeFile("/dist/index.html", generateHTML(response) , err => {
