@@ -3,12 +3,9 @@ const fs = require("fs")
 const Manager = require("./lib/Manager")
 const Engineer = require("./lib/Engineer")
 const Intern = require("./lib/Intern")
-const Employee = require("./lib/Employee")
 const generateHTML = require("./src/generateHTML")
 
-const managerArray = []; 
-const engieerArray = [];
-const internArray = [];
+const newTeam =[]
 
 const managerQuest= [
   {
@@ -89,7 +86,7 @@ const internQuest = [
  function addManager() {
   inquirer.prompt(managerQuest).then(response => {
     const manager = new Manager(response.name, response.id, response.email, response.officeNum)
-     managerArray.push(manager);
+     newTeam.push(manager);
    nextEmployee();
 
   })
@@ -98,7 +95,7 @@ const internQuest = [
 function addEngineer() {
   inquirer.prompt(engineerQuest).then(response => {
     const engineer = new Engineer(response.name, response.id, response.email, response.gitHub)
-    engieerArray.push(engineer);
+    newTeam.push(engineer);
 console.log(engineer)
     nextEmployee();
 
@@ -108,7 +105,7 @@ console.log(engineer)
 function addIntern() {
   inquirer.prompt(internQuest).then(response => {
     const intern = new Intern(response.name, response.id, response.email, response.school)
-    internArray.push(intern);
+    newTeam.push(intern);
     nextEmployee();
 
   })
@@ -135,9 +132,8 @@ function nextEmployee() {
 
 
 
-function stop (response) {
-  console.log(response)
-  fs.writeFile("/dist/index.html", generateHTML(response) , err => {
+function stop () {
+  fs.writeFile("dist/index.html", generateHTML(newTeam) , err => {
     if (err) {
       console.error(err);
     }})
