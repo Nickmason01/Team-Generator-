@@ -15,7 +15,7 @@ Clone from gitHub and then run in your terminal with node index.js
 
 
 ## Usage
-Answer prompts from the terminal about members of your team based upon what type of team  member they are (Engineer, Intern, etc)   then  those answers will be appeneded rto cards on a generated HTML pagwe
+Answer prompts from the terminal about members of your team based upon what type of team  member they are (Engineer, Intern, etc)   then  those answers will be appeneded rto cards on a generated HTML page
 
 ## Credits
 Nick Mason
